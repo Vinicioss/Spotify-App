@@ -41,13 +41,8 @@ export const Container = styled.div`
 
     .navlink_container {
         display: flex;
-        width: 100%;
         flex-direction: column;
-        gap: 0.8rem;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-        cursor: pointer;
+        width: 100%;
     }
 
     .navlink_item {
@@ -55,19 +50,62 @@ export const Container = styled.div`
         width: 100%;
         flex-direction: column;
         align-items: center;
-        padding: .5rem;
-        font-size: 1.3rem;
+        padding: .8rem 0;
+        font-size: 1.4rem;
         gap: .3rem;
-        border-left: 3px solid ${({ theme }) => theme.colors.background};
+        border-left: 5px solid transparent;
+        cursor: pointer;
         > label {
             font-size: .75rem;
+            cursor: pointer;
         }
     }
 
     .navlink_item:hover {
         background-color: ${({ theme }) => theme.colors.lightbackground};
         color: ${({ theme }) => theme.colors.textLight};
-        border-left: 3px solid ${({ theme }) => theme.colors.primary};
+        border-left: 5px solid ${({ theme }) => theme.colors.primary};
+    }
+
+    @media (max-width: 770px) {
+        .sidebar_container {
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            min-height: 4.5rem;
+            height: 4.5rem;
+            flex-direction: row;
+            padding: 0;
+        }
+
+        .spotify_icon,
+        .git_icon {
+            display: none;
+        }
+
+        .navlink_container {
+            height: 100%;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .navlink_item {
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            flex-basis: 100%;
+            height: 100%;  
+            padding: 0px; 
+            border-left: 0px;
+            border-top: 3px solid transparent;
+        }
+        .navlink_item:hover {
+            background-color: ${({ theme }) => theme.colors.lightbackground};
+            color: ${({ theme }) => theme.colors.textLight};
+            border-left: 0px;
+            border-top: 3px solid ${({ theme }) => theme.colors.primary};
+        }   
     }
 
     

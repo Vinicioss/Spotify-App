@@ -12,15 +12,15 @@ function Sidebar(){
                     <a href="https://open.spotify.com/user/vinicioss1592?si=285d35b2aace4929" 
                     className="ri-spotify-fill spotify_icon"></a>
                 </div>
-                <div className="navlink_container">
-                    <ul className="w_100">
-                        <Navlink icon={<BsPerson/>} title="Perfil"/>
-                        <Navlink icon={<TbMicrophone2/>} title="Top Artistas"/>
-                        <Navlink icon={<TbMusic/>} title="Top Músicas"/>
-                        <Navlink icon={<MdOutlineHistory/>} title="Recentes"/>
-                        <Navlink icon={<TbPlaylist/>} title="Playlists"/>
-                    </ul>
-                </div>
+
+                <ul className="navlink_container">
+                    <Navlink icon={<BsPerson/>} title="Perfil"/>
+                    <Navlink icon={<TbMicrophone2/>} title="Top Artistas"/>
+                    <Navlink icon={<TbMusic/>} title="Top Músicas"/>
+                    <Navlink icon={<MdOutlineHistory/>} title="Recentes"/>
+                    <Navlink icon={<TbPlaylist/>} title="Playlists"/>
+                </ul>
+                
                 <div>
                     <i className="ri-github-fill git_icon"></i>
                 </div>

@@ -11,7 +11,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         color: #fff;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .avatar_icon {
@@ -22,11 +22,35 @@ export const Container = styled.div`
     }
 
     .username_home {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
     }
     .username_home:hover {
         color: ${props => props.theme.colors.primary};
         cursor: pointer;
+    }
+
+    .folowers_section {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .followers_item {
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .3rem;
+
+        > h1 {
+            font-size: 1rem;
+            color: ${props => props.theme.colors.primary};
+        }
+
+        > label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: ${props => props.theme.colors.text};
+        }
     }
 `;
