@@ -1,9 +1,14 @@
-import Head from 'next/head';
+import Sidebar from "../components/Sidebar";
+import HomePage from "../components/HomePage";
+
+import 'remixicon/fonts/remixicon.css'
 
 export default function Home() {
   return (
-    <div>
-        <h1>Olá mundo</h1>
-    </div>
+    <main>
+      <Sidebar/>
+      <HomePage/>
+    </main>
+    
   );
 }
