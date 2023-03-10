@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 3rem 2rem;
+    padding: 5rem;
     display: flex;
     justify-content: center;
 
@@ -80,10 +80,6 @@ export const Container = styled.div`
         }
     }
 
-    .top_artist_item:hover {
-        background-color: ${props => props.theme.colors.bachgroundHighLight};
-    }
-
     .top_track_item {
         display: flex;
         align-items: center;
@@ -97,7 +93,6 @@ export const Container = styled.div`
         border-radius: .4rem;
 
         > img {
-            border-radius: 100%;
             width: max-content;
             height: 100%;
         }
@@ -106,5 +101,49 @@ export const Container = styled.div`
     .top_track_itemName {
         display: flex;
         flex-direction: column;
+    }
+
+    .top_track_labels {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .top_preview_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: ${props => props.theme.colors.textLight};
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+
+    @media screen and (max-width: 650px) {
+
+        padding: 2rem 1rem;
+        overflow: hidden;
+
+        .user_preview {
+            margin-top: 4rem;
+            gap: 1rem;
+        }
+
+        .top_artist_item {
+            height: 3rem;
+            width: 100%;
+            > label {
+                font-size: .2rem;
+            }
+
+        }
+
+        .top_track_item {
+            height: 3rem;
+            width: 100%;
+            font-size: 0.8em;
+        }
+
     }
 `;

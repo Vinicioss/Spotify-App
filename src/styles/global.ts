@@ -15,8 +15,10 @@ export default createGlobalStyle`
   }
 
   main {
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1400px;
     min-height: 100vh;
-    max-height: 100vh;
     padding-left: 6rem;
   }
 
@@ -40,7 +42,10 @@ export default createGlobalStyle`
 
   .button1 {
     cursor: pointer;
-    padding: .7rem 1.8rem .6rem 1.8rem;
+    min-width: 6rem;
+    height: 2.3rem;
+    text-align: center;
+    padding-top: .1rem;
     text-transform: uppercase;
     font-weight: 500;
     font-size: .7rem;
