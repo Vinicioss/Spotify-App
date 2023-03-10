@@ -10,7 +10,8 @@ export default createGlobalStyle`
   body {
     background: ${props => props.theme.colors.lightbackground};
     color: ${props => props.theme.colors.text};
-    font: 400 16px Inter, sans-serif;
+    font: 400 16px;
+    font-family: 'Circular Std', sans-serif;
   }
 
   main {
@@ -32,13 +33,17 @@ export default createGlobalStyle`
   button {
     all: unset;
   }
+  .f_c{
+    display: flex;
+    flex-direction: column;
+  }
 
   .button1 {
     cursor: pointer;
-    padding: .6rem 1.6rem;
+    padding: .7rem 1.8rem .6rem 1.8rem;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: .8rem;
+    font-weight: 500;
+    font-size: .7rem;
     color: ${props => props.theme.colors.textLight};
     border: 1px solid ${props => props.theme.colors.textLight};
     border-radius: 1.6rem;

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 3rem 6rem;
+    padding: 3rem 2rem;
     display: flex;
     justify-content: center;
 
-    .home_main {
+    .home_header {
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -52,5 +52,59 @@ export const Container = styled.div`
             text-transform: uppercase;
             color: ${props => props.theme.colors.text};
         }
+    }
+
+    .user_preview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 6rem;
+        gap: 4rem;
+    }
+
+    .top_artist_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 4rem;
+        width: 100%;
+        color: ${props => props.theme.colors.textLight};
+        gap: 1rem;
+        padding: .5rem;
+        cursor: pointer;
+        border-radius: .4rem;
+
+        > img {
+            border-radius: 100%;
+            width: max-content;
+            height: 100%;
+        }
+    }
+
+    .top_artist_item:hover {
+        background-color: ${props => props.theme.colors.bachgroundHighLight};
+    }
+
+    .top_track_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 4rem;
+        width: 100%;
+        color: ${props => props.theme.colors.textLight};
+        gap: 1rem;
+        padding: .5rem;
+        cursor: pointer;
+        border-radius: .4rem;
+
+        > img {
+            border-radius: 100%;
+            width: max-content;
+            height: 100%;
+        }
+    }
+
+    .top_track_itemName {
+        display: flex;
+        flex-direction: column;
     }
 `;

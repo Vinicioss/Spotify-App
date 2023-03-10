@@ -1,10 +1,12 @@
 import { Container } from "./styles";
 import { BsPerson } from "react-icons/bs";
+import TopTrack from "./topTrack";
+import TopArtist from "./topArtist";
 
 function HomePage(){
     return (
-        <Container>
-            <section className="home_main">
+        <Container className="f_c">
+            <section className="home_header">
                 <BsPerson className="avatar_icon"/>
 
                 <a href="https://open.spotify.com/user/vinicioss1592?si=285d35b2aace4929" 
@@ -25,6 +27,10 @@ function HomePage(){
                     </div>
                 </div>
                 <button className="button1 t_03s">Logout</button>
+            </section>
+            <section className="user_preview">
+                <TopArtist/>
+                <TopTrack/>
             </section>
         </Container>
     );

@@ -98,14 +98,24 @@ export const Container = styled.div`
             height: 100%;  
             padding: 0px; 
             border-left: 0px;
-            border-top: 3px solid transparent;
+            border-top: 5px solid transparent;
         }
         .navlink_item:hover {
             background-color: ${({ theme }) => theme.colors.lightbackground};
             color: ${({ theme }) => theme.colors.textLight};
             border-left: 0px;
-            border-top: 3px solid ${({ theme }) => theme.colors.primary};
+            border-top: 5px solid ${({ theme }) => theme.colors.primary};
         }   
+
+        @media (max-width: 400px) {
+
+            .navlink_item {
+                > label {
+                    font-size: .6rem;
+                }
+            }
+
+        }
     }
 
     
