@@ -101,6 +101,7 @@ export const Container = styled.div`
     .top_track_itemName {
         display: flex;
         flex-direction: column;
+        cursor: pointer;
     }
 
     .top_track_labels {
@@ -120,7 +121,7 @@ export const Container = styled.div`
     }
 
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 770px) {
 
         padding: 2rem 1rem;
         overflow: hidden;
@@ -144,6 +145,12 @@ export const Container = styled.div`
             width: 100%;
             font-size: 0.8em;
         }
+
+        .top_preview_header {
+        color: ${props => props.theme.colors.textLight};
+        font-size: 1rem;
+        font-weight: 600;
+    }
 
     }
 `;

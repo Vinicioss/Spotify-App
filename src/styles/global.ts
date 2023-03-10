@@ -5,6 +5,25 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+      width: .6rem;
+      border-radius: .5rem;
+      background-color: ${({ theme }) => theme.colors.lightbackground};
+    }
+    ::-webkit-scrollbar-thumb {
+        width: .6rem;
+        border-radius: .5rem;
+        background-color: ${({ theme }) => theme.colors.bachgroundHighLight};
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        width: .6rem;
+        border-radius: .5rem;
+        background-color: ${({ theme }) => theme.colors.text};
+    }
+
+    scrollbar-color: ${({ theme }) => theme.colors.bachgroundHighLight} ${({ theme }) => theme.colors.lightbackground} !important;
+    scrollbar-width: thin !important;
   }
 
   body {
