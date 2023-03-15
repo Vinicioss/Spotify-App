@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+
+
 export const Container = styled.div`
 
     .sidebar_container {
@@ -45,28 +47,6 @@ export const Container = styled.div`
         width: 100%;
     }
 
-    .navlink_item {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: .8rem 0;
-        font-size: 1.4rem;
-        gap: .3rem;
-        border-left: 5px solid transparent;
-        cursor: pointer;
-        > label {
-            font-size: .75rem;
-            cursor: pointer;
-        }
-    }
-
-    .navlink_item:hover {
-        background-color: ${({ theme }) => theme.colors.lightbackground};
-        color: ${({ theme }) => theme.colors.textLight};
-        border-left: 5px solid ${({ theme }) => theme.colors.primary};
-    }
-
     @media (max-width: 770px) {
         .sidebar_container {
             top: auto;
@@ -90,6 +70,51 @@ export const Container = styled.div`
             justify-content: center;
             align-items: flex-end;
         }
+    }
+
+    
+
+`;
+
+
+interface NavLinkProps {
+    isActive: boolean;
+}
+
+export const NavLinkContainer = styled.li<NavLinkProps>`
+
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+
+    .navlink_item {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: .8rem 0;
+        font-size: 1.4rem;
+        gap: .3rem;
+        background-color: ${( props ) => props.isActive ? props.theme.colors.lightbackground : props.theme.colors.background};
+        color: ${( props ) => props.isActive ? props.theme.colors.textLight : props.theme.colors.text};
+        border-left: 5px solid ${( props ) => props.isActive ? props.theme.colors.primary : props.theme.colors.background};
+        cursor: pointer;
+        > label {
+            font-size: .75rem;
+            cursor: pointer;
+        }
+    }
+
+    .navlink_item:hover {
+        background-color: ${({ theme }) => theme.colors.lightbackground};
+        color: ${({ theme }) => theme.colors.textLight};
+        border-left: 5px solid ${({ theme }) => theme.colors.primary};
+    }
+
+    @media (max-width: 770px) {
+
+        
         .navlink_item {
             align-items: center;
             justify-content: center;
@@ -98,7 +123,9 @@ export const Container = styled.div`
             height: 100%;  
             padding: 0px; 
             border-left: 0px;
-            border-top: 5px solid transparent;
+            background-color: ${( props ) => props.isActive ? props.theme.colors.lightbackground : props.theme.colors.background};
+            color: ${( props ) => props.isActive ? props.theme.colors.textLight : props.theme.colors.text};
+            border-top: 5px solid ${( props ) => props.isActive ? props.theme.colors.primary : props.theme.colors.background};
         }
         .navlink_item:hover {
             background-color: ${({ theme }) => theme.colors.lightbackground};
@@ -116,8 +143,7 @@ export const Container = styled.div`
             }
 
         }
-    }
 
-    
+    }
 
 `;

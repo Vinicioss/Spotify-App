@@ -14,11 +14,11 @@ function Sidebar(){
                 </div>
 
                 <ul className="navlink_container">
-                    <Navlink icon={<BsPerson/>} title="Perfil"/>
-                    <Navlink icon={<TbMicrophone2/>} title="Top Artistas"/>
-                    <Navlink icon={<TbMusic/>} title="Top Músicas"/>
-                    <Navlink icon={<MdOutlineHistory/>} title="Recentes"/>
-                    <Navlink icon={<TbPlaylist/>} title="Playlists"/>
+                    <Navlink icon={<BsPerson/>} title="Perfil" path="/"/>
+                    <Navlink icon={<TbMicrophone2/>} title="Top Artistas" path="/topartists" includes/>
+                    <Navlink icon={<TbMusic/>} title="Top Músicas" path="/topmusics" includes/>
+                    <Navlink icon={<MdOutlineHistory/>} title="Recentes" path="/recently" includes/>
+                    <Navlink icon={<TbPlaylist/>} title="Playlists" path="/playlists" includes/>
                 </ul>
                 
                 <div>
