@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     padding: 5rem;
-    display: flex;
-    justify-content: center;
+    
+    
 
     .home_header {
         display: flex;
         width: 100%;
+        position: relative;
         flex-direction: column;
         align-items: center;
         color: #fff;
@@ -57,8 +58,13 @@ export const Container = styled.div`
     .user_preview {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        width: 100%;
         margin-top: 6rem;
         gap: 4rem;
+    }
+
+    .top_container {
+        overflow: auto;
     }
 
     .top_artist_item {

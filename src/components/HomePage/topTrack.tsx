@@ -1,8 +1,9 @@
 import TrackTopItem from "./TrackTopItem";
+import { Container } from "./styles";
 
 function TopTrack(){
     return (
-        <div>
+        <section className="top_container">
             <div className="top_preview_header">
                 <label>Top musicas de todos os tempos</label>
                 <button className="button1">
@@ -17,7 +18,7 @@ function TopTrack(){
             songName="Amianto" 
             artistName="Supercombo" 
             time="2:32"/>
-        </div>
+        </section>
     );
 }
 

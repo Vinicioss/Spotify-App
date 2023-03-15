@@ -6,7 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
       width: .6rem;
       border-radius: .5rem;
       background-color: ${({ theme }) => theme.colors.lightbackground};
@@ -23,7 +23,7 @@ export default createGlobalStyle`
     }
 
     scrollbar-color: ${({ theme }) => theme.colors.bachgroundHighLight} ${({ theme }) => theme.colors.lightbackground} !important;
-    scrollbar-width: thin !important;
+    scrollbar-width: thin !important; */
   }
 
   body {
@@ -53,10 +53,6 @@ export default createGlobalStyle`
 
   button {
     all: unset;
-  }
-  .f_c{
-    display: flex;
-    flex-direction: column;
   }
 
   .button1 {

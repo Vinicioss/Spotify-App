@@ -5,7 +5,7 @@ import TopArtist from "./topArtist";
 
 function HomePage(){
     return (
-        <Container className="f_c">
+        <Container>
             <section className="home_header">
                 <BsPerson className="avatar_icon"/>
 
