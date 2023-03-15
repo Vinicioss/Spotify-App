@@ -1,12 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  *{
+  *,
+  *:before,
+  *:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    /* ::-webkit-scrollbar {
+
+    ::-webkit-scrollbar {
       width: .6rem;
       border-radius: .5rem;
       background-color: ${({ theme }) => theme.colors.lightbackground};
@@ -23,7 +26,7 @@ export default createGlobalStyle`
     }
 
     scrollbar-color: ${({ theme }) => theme.colors.bachgroundHighLight} ${({ theme }) => theme.colors.lightbackground} !important;
-    scrollbar-width: thin !important; */
+    scrollbar-width: thin !important;
   }
 
   body {
@@ -38,7 +41,7 @@ export default createGlobalStyle`
     margin: 0px auto;
     max-width: 1400px;
     min-height: 100vh;
-    padding-left: 6rem;
+    padding: 5rem;
   }
 
   a {
@@ -83,10 +86,26 @@ export default createGlobalStyle`
     transition: all 0.3s;
   }
 
+  .pl {
+    padding-left: 6rem;
+  }
+
+  @media (max-width: 1200px) {
+
+    main {
+      padding: 3rem;
+    }
+
+  }
+
   @media (max-width: 770px) {
 
     main {
-      padding: 0;
+      padding: 2rem;
+    }
+
+    .pl {
+      padding-left: 0rem;
     }
 
   }

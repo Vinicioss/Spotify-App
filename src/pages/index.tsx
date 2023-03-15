@@ -5,10 +5,11 @@ import 'remixicon/fonts/remixicon.css'
 
 export default function Home() {
   return (
-    <main>
-      <Sidebar/>
-      <HomePage/>
-    </main>
-    
+    <div className="pl">
+      <main>
+        <Sidebar/>
+        <HomePage/>
+      </main>
+    </div>
   );
 }
