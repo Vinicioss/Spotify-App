@@ -26,14 +26,14 @@ function Navlink({icon, title, path, includes = false} : Props){
     const isActive = verifyIfIsActive();
 
     return (
-        <NavLinkContainer isActive={isActive}>
-                <div className="navlink_item t_03s">
-                    {icon}
-                    <Link href={path}>
-                        <label>{title}</label>
-                    </Link>
-                </div>
-        </NavLinkContainer>
+        <Link href={path}>
+            <NavLinkContainer isActive={isActive}>
+                    <div className="navlink_item t_03s">
+                            {icon}
+                            <label>{title}</label>
+                    </div>
+            </NavLinkContainer>
+        </Link>
     );
 }
 

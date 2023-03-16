@@ -16,7 +16,7 @@ function Sidebar(){
                 <ul className="navlink_container">
                     <Navlink icon={<BsPerson/>} title="Perfil" path="/"/>
                     <Navlink icon={<TbMicrophone2/>} title="Top Artistas" path="/topartists" includes/>
-                    <Navlink icon={<TbMusic/>} title="Top Músicas" path="/topmusics" includes/>
+                    <Navlink icon={<TbMusic/>} title="Top Músicas" path="/topsongs" includes/>
                     <Navlink icon={<MdOutlineHistory/>} title="Recentes" path="/recently" includes/>
                     <Navlink icon={<TbPlaylist/>} title="Playlists" path="/playlists" includes/>
                 </ul>
