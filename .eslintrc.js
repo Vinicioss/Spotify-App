@@ -9,7 +9,6 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'airbnb-typescript',
-    'prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -25,8 +24,9 @@ module.exports = {
   rules: {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': 'error',
     'space-before-function-paren': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'linebreak-style' : 'off',
+    'typescript-eslint/comma-dangle' : 'off'
   }
 };

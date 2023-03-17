@@ -1,12 +1,11 @@
 import TrackTopItem from "./TrackTopItem";
-import { Container } from "./styles";
 
 function TopTrack(){
     return (
         <section className="top_container">
             <div className="top_preview_header">
-                <label>Top musicas de todos os tempos</label>
-                <button className="button1">
+                <span>Top musicas de todos os tempos</span>
+                <button type="button" className="button1">
                     Ver mais
                 </button>
             </div>

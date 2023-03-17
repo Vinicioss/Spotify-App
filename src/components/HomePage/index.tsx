@@ -2,8 +2,14 @@ import { Container } from "./styles";
 import { BsPerson } from "react-icons/bs";
 import TopTrack from "./topTrack";
 import TopArtist from "./topArtist";
+import { signOut, useSession } from "next-auth/react";
+
 
 function HomePage(){
+
+    const { data: session, status } = useSession();
+
+
     return (
         <Container>
             <section className="home_header">
@@ -26,7 +32,7 @@ function HomePage(){
                         <label>Playlists</label>
                     </div>
                 </div>
-                <button className="button1 t_03s">Logout</button>
+                <button className="button1 t_03s" onClick={() => signOut()}>Logout</button>
             </section>
             <section className="user_preview">
                 <TopArtist/>

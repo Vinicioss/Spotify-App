@@ -1,11 +1,8 @@
-import { Container } from "./styles";
-
-
-function ArtistTopItem({icon, name}){
+function ArtistTopItem({ icon, name }){
     return (
         <div className="top_artist_item">
-            <img src={icon}/>
-            {name}
+            <img src={ icon }/>
+            { name }
         </div>
     );
 }

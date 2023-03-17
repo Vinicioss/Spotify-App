@@ -1,9 +1,12 @@
 import Head from "next/head";
+import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { TopArtistContainer } from '../styles/pagestyle';
 
 
+
 function TopArtistPage(){
+
     return (
         <TopArtistContainer>
             <Head>
@@ -18,7 +21,15 @@ function TopArtistPage(){
 
         <div className="pl"> 
 
-            <h1>Top Artistas</h1>
+
+            <div>
+            <div>
+                <h1>Faça login no Spotify</h1>
+                <a href={'/authentication'}>LOGIN COM O SPOTIFY</a>
+            </div>
+            
+            </div>
+
 
         </div>
 
